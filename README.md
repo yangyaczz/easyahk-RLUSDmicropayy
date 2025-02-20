@@ -1,4 +1,4 @@
-# QR RLUSD micropayments
+# QR RLUSD MICROPAY
 
 🌐 A decentralized payment solution enabling QR code-based cross-border transactions using RLUSD stablecoin with real-time FX rates from Pyth Oracle 💱
 
