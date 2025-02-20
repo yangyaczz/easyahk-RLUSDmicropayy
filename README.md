@@ -1,97 +1,170 @@
-# 🏗 Scaffold-ETH 2
+# QR RLUSD micropayments
 
-<h4 align="center">
-  <a href="https://docs.scaffoldeth.io">Documentation</a> |
-  <a href="https://scaffoldeth.io">Website</a>
-</h4>
+🌐 A decentralized payment solution enabling QR code-based cross-border transactions using RLUSD stablecoin with real-time FX rates from Pyth Oracle 💱
 
-🧪 An open-source, up-to-date toolkit for building decentralized applications (dapps) on the Ethereum blockchain. It's designed to make it easier for developers to create and deploy smart contracts and build user interfaces that interact with those contracts.
+🔍 This project streamlines cross-border micropayments through QR code scanning, powered by smart contracts on Ethereum. Users can scan QR codes containing HKD amounts, which are automatically converted to RLUSD using real-time exchange rates from Pyth Oracle. The system ensures secure and efficient transactions by leveraging blockchain technology and stable digital currencies.
 
-⚙️ Built using NextJS, RainbowKit, Foundry, Wagmi, Viem, and Typescript.
+Key Features:
+- 📱 Simple QR code scanning interface
+- 💰 RLUSD stablecoin integration
+- 🔄 Real-time FX rates via Pyth Oracle
+- ⚡ Fast and low-cost transactions
+- 🔐 Secure smart contract implementation
 
-- ✅ **Contract Hot Reload**: Your frontend auto-adapts to your smart contract as you edit it.
-- 🪝 **[Custom hooks](https://docs.scaffoldeth.io/hooks/)**: Collection of React hooks wrapper around [wagmi](https://wagmi.sh/) to simplify interactions with smart contracts with typescript autocompletion.
-- 🧱 [**Components**](https://docs.scaffoldeth.io/components/): Collection of common web3 components to quickly build your frontend.
-- 🔥 **Burner Wallet & Local Faucet**: Quickly test your application with a burner wallet and local faucet.
-- 🔐 **Integration with Wallet Providers**: Connect to different wallet providers and interact with the Ethereum network.
+## Problem Statement & Solution
 
-![Debug Contracts tab](https://github.com/scaffold-eth/scaffold-eth-2/assets/55535804/b237af0c-5027-4849-a5c1-2e31495cccb1)
+Traditional cross-border payments face several challenges:
+- High transaction fees and currency conversion costs
+- Long processing times due to intermediary banks
+- Limited transparency in exchange rates
+- Complex compliance requirements
+- Lack of 24/7 availability
 
-## Requirements
+Our solution addresses these pain points through:
+- 💫 **Decentralized Architecture**: Built on Ethereum, eliminating intermediary banks
+- 💱 **Real-time FX**: Integration with Pyth Oracle for accurate, manipulation-resistant exchange rates
+- 🏦 **Stablecoin Usage**: RLUSD provides stability and reduces volatility risks
+- 🔄 **Instant Settlement**: Near-immediate transaction finality
+- 🌐 **Global Accessibility**: 24/7 operation with consistent service
 
-Before you begin, you need to install the following tools:
+## Technical Implementation
 
-- [Node (>= v18.18)](https://nodejs.org/en/download/)
-- Yarn ([v1](https://classic.yarnpkg.com/en/docs/install/) or [v2+](https://yarnpkg.com/getting-started/install))
-- [Git](https://git-scm.com/downloads)
+The system is built using modern Web3 technologies:
 
-## Quickstart
+### Smart Contracts (Foundry)
+- RLUSDFundPool contract manages payment processing and currency conversion
+- Integration with Pyth Oracle for real-time price feeds
+- Comprehensive test coverage ensuring reliability
+- Gas-optimized for cost-effective transactions
 
-To get started with Scaffold-ETH 2, follow the steps below:
+### Frontend (Next.js)
+- Responsive QR code scanner implementation
+- Real-time price updates and conversion display
+- Wallet integration via RainbowKit
+- User-friendly transaction flow
 
-1. Install dependencies if it was skipped in CLI:
+### Oracle Integration
+- Pyth Network provides reliable price feeds for:
+  - RLUSD/USD exchange rates
+  - HKD/USD exchange rates
+- Price update verification ensures data accuracy
+- Fallback mechanisms for oracle redundancy
 
-```
-cd my-dapp-example
-yarn install
-```
-
-2. Run a local network in the first terminal:
-
-```
-yarn chain
-```
-
-This command starts a local Ethereum network using Foundry. The network runs on your local machine and can be used for testing and development. You can customize the network configuration in `packages/foundry/foundry.toml`.
-
-3. On a second terminal, deploy the test contract:
-
-```
-yarn deploy
-```
-
-This command deploys a test smart contract to the local network. The contract is located in `packages/foundry/contracts` and can be modified to suit your needs. The `yarn deploy` command uses the deploy script located in `packages/foundry/script` to deploy the contract to the network. You can also customize the deploy script.
-
-4. On a third terminal, start your NextJS app:
-
-```
-yarn start
-```
-
-Visit your app on: `http://localhost:3000`. You can interact with your smart contract using the `Debug Contracts` page. You can tweak the app config in `packages/nextjs/scaffold.config.ts`.
-
-Run smart contract test with `yarn foundry:test`
-
-- Edit your smart contracts in `packages/foundry/contracts`
-- Edit your frontend homepage at `packages/nextjs/app/page.tsx`. For guidance on [routing](https://nextjs.org/docs/app/building-your-application/routing/defining-routes) and configuring [pages/layouts](https://nextjs.org/docs/app/building-your-application/routing/pages-and-layouts) checkout the Next.js documentation.
-- Edit your deployment scripts in `packages/foundry/script`
+### Security Features
+- Multi-layered security approach
+- Rate limiting and transaction caps
+- Oracle price validation
+- Emergency pause functionality
+- Comprehensive audit coverage
 
 
-## Documentation
+## Technical Deep Dive 🔬
 
-Visit our [docs](https://docs.scaffoldeth.io) to learn how to start building with Scaffold-ETH 2.
+### Core SDKs & Technologies
 
-To know more about its features, check out our [website](https://scaffoldeth.io).
+#### Pyth Network Integration 🔮
+- Direct integration with Pyth Network's price feeds
+- Real-time RLUSD/USD and HKD/USD price updates
+- Price validation and manipulation resistance
+- Implementation using `@pythnetwork/pyth-sdk-solidity`
 
-## Contributing to Scaffold-ETH 2
+#### Smart Contract Development 🔗
+- Built with Foundry framework for robust testing and deployment
+- OpenZeppelin contracts for secure token handling and access control
+- Gas-optimized price calculations and currency conversions
+- Comprehensive test coverage with Forge
 
-We welcome contributions to Scaffold-ETH 2!
+#### Frontend Technologies 📱
+- Next.js 13 with App Router for modern React architecture
+- RainbowKit for seamless wallet integration
+- Wagmi hooks for blockchain interactions
+- Real-time QR code scanning using `@yudiel/react-qr-scanner`
 
-Please see [CONTRIBUTING.MD](https://github.com/scaffold-eth/scaffold-eth-2/blob/main/CONTRIBUTING.md) for more information and guidelines for contributing to Scaffold-ETH 2.
+### Unique Technical Features
+
+#### Price Feed Implementation 💱
+- Dual price feed system for accurate cross-currency calculations
+- Price update verification through Pyth's updatePriceFeeds mechanism
+- Fallback mechanisms for oracle redundancy
+
+#### Smart Contract Architecture 🏗
+- Modular contract design with clear separation of concerns
+- Price calculation logic with precision handling
+- Safety checks and circuit breakers
+
+#### User Experience Optimizations ⚡
+- Step-by-step transaction flow with real-time updates
+- Automatic price calculations and currency conversions
+- Responsive QR code scanning interface
+
+### Development Tools 🛠
+- Foundry for smart contract development and testing
+- Hardhat for deployment and verification
+- TypeScript for type-safe development
+- Prettier and ESLint for code quality
+- Vitest for frontend testing
+
+### Security Considerations 🔒
+- Multi-layered security approach with OpenZeppelin contracts
+- Price feed validation and timeout checks
+- Rate limiting and transaction caps
+- Emergency pause functionality
+- Comprehensive audit coverage
+
+This implementation leverages Pyth Network's unique features:
+- High-frequency price updates
+- Cross-chain price consistency
+- Manipulation resistance
+- Multiple price feed redundancy
 
 
 
+## Development Guide 🛠
+
+### Testing & Deployment Commands
+
+#### Local Testing
+
+Run specific test file for RLUSDFundPool contract
 forge test --match-path test/RLUSDFundPool.t.sol -vv
+```bash
+forge test --match-path test/RLUSDFundPool.t.sol -vv
+```
 
-yarn deploy --file DeployYourContract.s.sol  --network sepolia -vvvv
-yarn verify --network sepolia 
+
+#### Deployment
 
 
-cast send 0xe101FB315a64cDa9944E570a7bFfaFE60b994b1D "approve(address,uint256)" 0xA296a2453502eE77F5FdD13E77869e505D3cAdaD $(cast max-uint) --rpc-url https://sepolia.gateway.tenderly.co --private-key xxxxx
 
+Deploy to Sepolia testnet with verbose output
+```
+yarn deploy --file DeployYourContract.s.sol --network sepolia -vvvv
+```
+Verify contract on Sepolia
+```
+yarn verify --network sepolia
+```
+
+bash
+Approve RLUSD spending for the FundPool contract
+Parameters:
+- RLUSD token: 0xe101FB315a64cDa9944E570a7bFfaFE60b994b1D
+- FundPool contract: 0xA296a2453502eE77F5FdD13E77869e505D3cAdaD
+cast send 0xe101FB315a64cDa9944E570a7bFfaFE60b994b1D "approve(address,uint256)" \
+0xA296a2453502eE77F5FdD13E77869e505D3cAdaD $(cast max-uint) \
+--rpc-url https://sepolia.gateway.tenderly.co \
+--private-key xxxxx
+
+### Pyth Oracle Integration
+
+#### Price Feed Endpoints
+Get latest price updates for RLUSD/USD and HKD/USD
+Price Feed IDs:
+- RLUSD/USD: 0x65652029e7acde632e80192dcaa6ea88e61d84a4c78a982a63e98f4bbcb288d5
+- HKD/USD: 0x19d75fde7fee50fe67753fdc825e583594eb2f51ae84e114a5246c4ab23aff4c
+Browser URL
 https://hermes.pyth.network/v2/updates/price/latest?ids%5B%5D=0x65652029e7acde632e80192dcaa6ea88e61d84a4c78a982a63e98f4bbcb288d5&ids%5B%5D=0x19d75fde7fee50fe67753fdc825e583594eb2f51ae84e114a5246c4ab23aff4c
-
-
-通过pyth获取最新价格， 得到bytes的入参数
+CURL command
 curl -X GET "https://hermes.pyth.network/v2/updates/price/latest?ids[]=0x65652029e7acde632e80192dcaa6ea88e61d84a4c78a982a63e98f4bbcb288d5&ids[]=0x19d75fde7fee50fe67753fdc825e583594eb2f51ae84e114a5246c4ab23aff4c"
+
 
