@@ -2,7 +2,7 @@
 # QR RLUSD MICROPAY
 
 ### Demo Video 📹
-[![Demo Video](https://img.shields.io/badge/Watch-Demo%20Video-red)](https://drive.google.com/file/d/1E8Y_X0Z0l0DRkh7VFG85FvyQF1Mkaru8/view?usp=sharing)
+![Demo Video](https://img.shields.io/badge/Watch-Demo%20Video-red)Please click the below image to watch the demo video.
 
 <div align="center">
   <a href="https://www.youtube.com/watch?v=TPxuIs0b57Y">
