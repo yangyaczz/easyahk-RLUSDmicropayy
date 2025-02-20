@@ -8,11 +8,11 @@ export type ScaffoldConfig = {
   onlyLocalBurnerWallet: boolean;
 };
 
-export const DEFAULT_ALCHEMY_API_KEY = "oKxs-03sij-U_N0iOlrSsZFr29-IqbuF";
+export const DEFAULT_ALCHEMY_API_KEY = "SVDtzq815_SRP0CUIMMVpFK73LPj8GUz";
 
 const scaffoldConfig = {
   // The networks on which your DApp is live
-  targetNetworks: [chains.foundry],
+  targetNetworks: [chains.sepolia],
 
   // The interval at which your front-end polls the RPC servers for new data
   // it has no effect if you only target the local network (default is 4000)

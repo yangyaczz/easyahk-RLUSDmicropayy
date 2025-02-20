@@ -1442,6 +1442,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@pythnetwork/pyth-sdk-solidity@npm:^4.0.0":
+  version: 4.0.0
+  resolution: "@pythnetwork/pyth-sdk-solidity@npm:4.0.0"
+  checksum: c9fb183dc5da27ea12a712771f0f43412afd48ea348f0d9043547d77e161507605797e165d78bac0e6671f08149f66313e4c78070123cb7211b0a19121fad1b0
+  languageName: node
+  linkType: hard
+
 "@rainbow-me/rainbowkit@npm:2.1.0":
   version: 2.1.0
   resolution: "@rainbow-me/rainbowkit@npm:2.1.0"
@@ -1637,6 +1644,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@se-2/foundry@workspace:packages/foundry"
   dependencies:
+    "@pythnetwork/pyth-sdk-solidity": ^4.0.0
     dotenv: ~16.3.1
     envfile: ~6.18.0
     ethers: ~5.7.1
@@ -1982,6 +1990,13 @@ __metadata:
   dependencies:
     "@types/ms": "*"
   checksum: 47876a852de8240bfdaf7481357af2b88cb660d30c72e73789abf00c499d6bc7cd5e52f41c915d1b9cd8ec9fef5b05688d7b7aef17f7f272c2d04679508d1053
+  languageName: node
+  linkType: hard
+
+"@types/emscripten@npm:^1.39.13":
+  version: 1.40.0
+  resolution: "@types/emscripten@npm:1.40.0"
+  checksum: 5e8db08b0ad4eb4abca40897f1bf0df5bb2a96b8c9c46b5a7d032ffcbd406842a2817488b40dcbc2d0edaaabf136055a23570c898c5627a38cdfdcf816e92a5c
   languageName: node
   linkType: hard
 
@@ -2997,6 +3012,53 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@yudiel/react-qr-scanner@npm:^2.2.1":
+  version: 2.2.1
+  resolution: "@yudiel/react-qr-scanner@npm:2.2.1"
+  dependencies:
+    barcode-detector: ^3.0.0
+    webrtc-adapter: 9.0.1
+  peerDependencies:
+    react: ^17 || ^18 || ^19
+    react-dom: ^17 || ^18 || ^19
+  checksum: a52f169f77a317d0ad18829e6f38263a47247aa09bbbdf67824468592249bce03014939894191904e574ddd690ca3ac8f6a22b2300da109927de93ba4ebe81e0
+  languageName: node
+  linkType: hard
+
+"@zxing/browser@npm:0.0.7":
+  version: 0.0.7
+  resolution: "@zxing/browser@npm:0.0.7"
+  dependencies:
+    "@zxing/text-encoding": ^0.9.0
+  peerDependencies:
+    "@zxing/library": ^0.18.3
+  dependenciesMeta:
+    "@zxing/text-encoding":
+      optional: true
+  checksum: 5f56628382a053436f0fd4163d0853e11f24059655e26e5311a97baae5fce524efe6fc397a82de7634b12585568c714789bca75d9747478d6030d27b907fc3ab
+  languageName: node
+  linkType: hard
+
+"@zxing/library@npm:^0.18.3":
+  version: 0.18.6
+  resolution: "@zxing/library@npm:0.18.6"
+  dependencies:
+    "@zxing/text-encoding": ~0.9.0
+    ts-custom-error: ^3.0.0
+  dependenciesMeta:
+    "@zxing/text-encoding":
+      optional: true
+  checksum: 564a25f6245b4fd81b4ce686116bf1fe577daa2aaee4263b4dea3776676482fd3e063ad43783c6378713a4a3dcefd311b6154b6cd43e7be24bb7e7c3e5fec98a
+  languageName: node
+  linkType: hard
+
+"@zxing/text-encoding@npm:^0.9.0, @zxing/text-encoding@npm:~0.9.0":
+  version: 0.9.0
+  resolution: "@zxing/text-encoding@npm:0.9.0"
+  checksum: c23b12aee7639382e4949961304a1294776afaffa40f579e09ffecd0e5e68cf26ef3edd75009de46da8a536e571448755ca68b3e2ea707d53793c0edb2e2c34a
+  languageName: node
+  linkType: hard
+
 "abbrev@npm:1":
   version: 1.1.1
   resolution: "abbrev@npm:1.1.1"
@@ -3502,6 +3564,15 @@ __metadata:
   version: 1.0.2
   resolution: "balanced-match@npm:1.0.2"
   checksum: 9706c088a283058a8a99e0bf91b0a2f75497f185980d9ffa8b304de1d9e58ebda7c72c07ebf01dadedaac5b2907b2c6f566f660d62bd336c3468e960403b9d65
+  languageName: node
+  linkType: hard
+
+"barcode-detector@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "barcode-detector@npm:3.0.0"
+  dependencies:
+    zxing-wasm: ^2.0.1
+  checksum: e11ef4f73185561e90fb696c027ef70cbaff34583bba1c009f9869e7d340f6788f2aa00db48d253570b79b32598703671035011f96027b4a72ca8bf8a3777f7c
   languageName: node
   linkType: hard
 
@@ -8768,6 +8839,20 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-qr-reader@npm:^3.0.0-beta-1":
+  version: 3.0.0-beta-1
+  resolution: "react-qr-reader@npm:3.0.0-beta-1"
+  dependencies:
+    "@zxing/browser": 0.0.7
+    "@zxing/library": ^0.18.3
+    rollup: ^2.67.2
+  peerDependencies:
+    react: ^16.8.0 || ^17.0.0
+    react-dom: ^16.8.0 || ^17.0.0
+  checksum: f85fc490251cba1b763b9f1eb56ac8fb3cd006fcb189ed2b4e8e59bfb61f9493d96274aeb5e980b6093b9ca5595af76893369ecc00562664d033f37f567bd00d
+  languageName: node
+  linkType: hard
+
 "react-remove-scroll-bar@npm:^2.3.4, react-remove-scroll-bar@npm:^2.3.6":
   version: 2.3.8
   resolution: "react-remove-scroll-bar@npm:2.3.8"
@@ -9118,6 +9203,20 @@ __metadata:
   languageName: node
   linkType: hard
 
+"rollup@npm:^2.67.2":
+  version: 2.79.2
+  resolution: "rollup@npm:2.79.2"
+  dependencies:
+    fsevents: ~2.3.2
+  dependenciesMeta:
+    fsevents:
+      optional: true
+  bin:
+    rollup: dist/bin/rollup
+  checksum: df7aa4c8b95245dede157b06ab71e1921de6080757d30e9bf31f8fb142064d12dda865e2bafbab4349588f43425b2965a290c9a5da1c048246a70fc21734ebd7
+  languageName: node
+  linkType: hard
+
 "run-parallel@npm:^1.1.9":
   version: 1.2.0
   resolution: "run-parallel@npm:1.2.0"
@@ -9214,12 +9313,21 @@ __metadata:
   languageName: node
   linkType: hard
 
+"sdp@npm:^3.2.0":
+  version: 3.2.0
+  resolution: "sdp@npm:3.2.0"
+  checksum: 227885bddab9a5845e56ae184ff51e43ec7bc155e7f1ed2f17ca1b012e6767011d5bd01b6c4064ded8e3b6f6bf3c9b26b2cf754b9c8662285988ed27b54f37b1
+  languageName: node
+  linkType: hard
+
 "se-2@workspace:.":
   version: 0.0.0-use.local
   resolution: "se-2@workspace:."
   dependencies:
+    "@yudiel/react-qr-scanner": ^2.2.1
     husky: ~8.0.3
     lint-staged: ~13.2.2
+    react-qr-reader: ^3.0.0-beta-1
   languageName: unknown
   linkType: soft
 
@@ -10095,6 +10203,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"ts-custom-error@npm:^3.0.0":
+  version: 3.3.1
+  resolution: "ts-custom-error@npm:3.3.1"
+  checksum: 50a1e825fced68d70049bd8d282379a635e43aa023a370fa8e736b12a6edba7f18a2d731fa194ac35303a8b625be56e121bdb31d8a0318250d1a8b277059fce3
+  languageName: node
+  linkType: hard
+
 "ts-interface-checker@npm:^0.1.9":
   version: 0.1.13
   resolution: "ts-interface-checker@npm:0.1.13"
@@ -10214,6 +10329,13 @@ __metadata:
   version: 0.21.3
   resolution: "type-fest@npm:0.21.3"
   checksum: e6b32a3b3877f04339bae01c193b273c62ba7bfc9e325b8703c4ee1b32dc8fe4ef5dfa54bf78265e069f7667d058e360ae0f37be5af9f153b22382cd55a9afe0
+  languageName: node
+  linkType: hard
+
+"type-fest@npm:^4.33.0":
+  version: 4.35.0
+  resolution: "type-fest@npm:4.35.0"
+  checksum: 14581e7b02bb43caa4893eec321a993378218c2672715d28c6f85a97756cf59864f4d90f8a794cf1929e861470debc8e682bf5c9575522872b520611b4bb14a0
   languageName: node
   linkType: hard
 
@@ -10825,6 +10947,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"webrtc-adapter@npm:9.0.1":
+  version: 9.0.1
+  resolution: "webrtc-adapter@npm:9.0.1"
+  dependencies:
+    sdp: ^3.2.0
+  checksum: b9a5d24dc43e00f5fb5423d4f5974ddfd6d45019eea374e8fb947560a820d66ad7ab5bee976c734b3db4ff09641be8a362e3e800b5906a5e81c6dbb155cc4256
+  languageName: node
+  linkType: hard
+
 "whatwg-url@npm:^5.0.0":
   version: 5.0.0
   resolution: "whatwg-url@npm:5.0.0"
@@ -11255,5 +11386,17 @@ __metadata:
     use-sync-external-store:
       optional: true
   checksum: 72da39ac3017726c3562c615a0f76cee0c9ea678d664f82ee7669f8cb5e153ee81059363473094e4154d73a2935ee3459f6792d1ec9d08d2e72ebe641a16a6ba
+  languageName: node
+  linkType: hard
+
+"zxing-wasm@npm:^2.0.1":
+  version: 2.0.1
+  resolution: "zxing-wasm@npm:2.0.1"
+  dependencies:
+    "@types/emscripten": ^1.39.13
+    type-fest: ^4.33.0
+  peerDependencies:
+    "@types/emscripten": ">=1.39.6"
+  checksum: 0486fa962cdc2ab82aa9eb136bb3991be041b45098d660465f03176d3d0978643c414873bdc99d5044d4af243bf2164fa493fce452b34c30886c442b1cc6827b
   languageName: node
   linkType: hard

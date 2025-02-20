@@ -3,6 +3,7 @@ pragma solidity ^0.8.19;
 
 import "./DeployHelpers.s.sol";
 import "../contracts/YourContract.sol";
+import "../contracts/RLUSDFundPool.sol"; 
 
 /**
  * @notice Deploy script for YourContract contract
@@ -25,6 +26,6 @@ contract DeployYourContract is ScaffoldETHDeploy {
      *      - Export contract addresses & ABIs to `nextjs` packages
      */
     function run() external ScaffoldEthDeployerRunner {
-        new YourContract(deployer);
+        new RLUSDFundPool{value: 0.0005 ether}(0xDd24F84d36BF92C65F92307595335bdFab5Bbd21, 0xe101FB315a64cDa9944E570a7bFfaFE60b994b1D);
     }
 }

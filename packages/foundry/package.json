@@ -19,6 +19,7 @@
     "verify-keystore": "make verify-keystore"
   },
   "dependencies": {
+    "@pythnetwork/pyth-sdk-solidity": "^4.0.0",
     "dotenv": "~16.3.1",
     "envfile": "~6.18.0",
     "ethers": "~5.7.1",

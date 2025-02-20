@@ -78,3 +78,20 @@ To know more about its features, check out our [website](https://scaffoldeth.io)
 We welcome contributions to Scaffold-ETH 2!
 
 Please see [CONTRIBUTING.MD](https://github.com/scaffold-eth/scaffold-eth-2/blob/main/CONTRIBUTING.md) for more information and guidelines for contributing to Scaffold-ETH 2.
+
+
+
+forge test --match-path test/RLUSDFundPool.t.sol -vv
+
+yarn deploy --file DeployYourContract.s.sol  --network sepolia -vvvv
+yarn verify --network sepolia 
+
+
+cast send 0xe101FB315a64cDa9944E570a7bFfaFE60b994b1D "approve(address,uint256)" 0xA296a2453502eE77F5FdD13E77869e505D3cAdaD $(cast max-uint) --rpc-url https://sepolia.gateway.tenderly.co --private-key xxxxx
+
+https://hermes.pyth.network/v2/updates/price/latest?ids%5B%5D=0x65652029e7acde632e80192dcaa6ea88e61d84a4c78a982a63e98f4bbcb288d5&ids%5B%5D=0x19d75fde7fee50fe67753fdc825e583594eb2f51ae84e114a5246c4ab23aff4c
+
+
+通过pyth获取最新价格， 得到bytes的入参数
+curl -X GET "https://hermes.pyth.network/v2/updates/price/latest?ids[]=0x65652029e7acde632e80192dcaa6ea88e61d84a4c78a982a63e98f4bbcb288d5&ids[]=0x19d75fde7fee50fe67753fdc825e583594eb2f51ae84e114a5246c4ab23aff4c"
+
