@@ -1,6 +1,9 @@
 ![Payment Flow Interface](./images/project_logo.png)
 # QR RLUSD MICROPAY
 
+### Demo Video 📹
+[![Demo Video](https://img.shields.io/badge/Watch-Demo%20Video-red)](https://drive.google.com/file/d/1E8Y_X0Z0l0DRkh7VFG85FvyQF1Mkaru8/view?usp=sharing)
+
 
 🌐 A decentralized payment solution enabling QR code-based cross-border transactions using RLUSD stablecoin with real-time FX rates from Pyth Oracle 💱
 
