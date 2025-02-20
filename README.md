@@ -58,6 +58,11 @@ The system is built using modern Web3 technologies:
 - Pyth Network provides reliable price feeds for:
   - RLUSD/USD exchange rates
   - HKD/USD exchange rates
+  - HKD/CNY exchange rates
+  - HKD/GBP exchange rates
+  - HKD/EUR exchange rates
+  - HKD/JPY exchange rates
+  - and arbitrary exchange pairs..
 - Price update verification ensures data accuracy
 - Fallback mechanisms for oracle redundancy
 
