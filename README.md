@@ -1,4 +1,6 @@
+![Payment Flow Interface](./images/project_logo.png)
 # QR RLUSD MICROPAY
+
 
 🌐 A decentralized payment solution enabling QR code-based cross-border transactions using RLUSD stablecoin with real-time FX rates from Pyth Oracle 💱
 
@@ -10,6 +12,15 @@ Key Features:
 - 🔄 Real-time FX rates via Pyth Oracle
 - ⚡ Fast and low-cost transactions
 - 🔐 Secure smart contract implementation
+
+![Payment Flow Interface](./images/qr_code_scan.png)
+*QR code scanning*
+
+![Payment Flow Interface](./images/payment_confirmation.png)
+*Pending payment confirmation*
+
+![Payment Flow Interface](./images/payment_success.png)
+*Payment success*
 
 ## Problem Statement & Solution
 
@@ -59,6 +70,8 @@ The system is built using modern Web3 technologies:
 
 
 ## Technical Deep Dive 🔬
+![Payment Flow Interface](./images/diagram.png)
+*Technical diagram*
 
 ### Core SDKs & Technologies
 
