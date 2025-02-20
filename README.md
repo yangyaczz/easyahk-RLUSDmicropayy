@@ -4,6 +4,12 @@
 ### Demo Video 📹
 [![Demo Video](https://img.shields.io/badge/Watch-Demo%20Video-red)](https://drive.google.com/file/d/1E8Y_X0Z0l0DRkh7VFG85FvyQF1Mkaru8/view?usp=sharing)
 
+<div align="center">
+  <a href="https://www.youtube.com/watch?v=TPxuIs0b57Y">
+    <img src="https://img.youtube.com/vi/TPxuIs0b57Y/maxresdefault.jpg" alt="Demo Video" style="width:100%;max-width:720px;">
+  </a>
+</div>
+
 
 🌐 A decentralized payment solution enabling QR code-based cross-border transactions using RLUSD stablecoin with real-time FX rates from Pyth Oracle 💱
 
